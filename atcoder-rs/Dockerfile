@@ -1,5 +1,8 @@
 FROM rust:1.42.0-slim-buster
 
+ENV USER=root \
+    LESSCHARSET=utf-8
+
 COPY --from=masinc/atcoder-rs-builder /root/bin/* /usr/local/cargo/bin/
 
 RUN apt update -y && \
