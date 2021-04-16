@@ -2,8 +2,12 @@ name: Docker Image CI
 
 on:
   push:
+    paths:
+      - "atcoder-rs/Dockerfile"
     branches: [main]
   pull_request:
+    paths:
+      - "atcoder-rs/Dockerfile"
     branches: [main]
   schedule:
     - cron: "0 1 * * *"
