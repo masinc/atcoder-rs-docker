@@ -4,10 +4,12 @@ on:
   push:
     paths:
       - "atcoder-rs/Dockerfile"
+      - ".github/workflows/build-atcoder-rs.yml"
     branches: [main]
   pull_request:
     paths:
       - "atcoder-rs/Dockerfile"
+      - ".github/workflows/build-atcoder-rs.yml"
     branches: [main]
   schedule:
     - cron: "0 1 * * *"
