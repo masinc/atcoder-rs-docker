@@ -13,6 +13,6 @@ rustup component add rustfmt clippy && \
 # rust-analyzer-bin
 mkdir -p ~/bin && \
 curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux -o ~/bin/rust-analyzer && \
-chmod +x ~/bin/rust-analyzer && \
+chmod +x ~/bin/rust-analyzer
 # sccache
-sccache --start-server
+# sccache --start-server
