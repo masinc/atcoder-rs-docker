@@ -3,12 +3,12 @@ name: Build/Deploy atcoder-rs
 on:
   push:
     paths:
-      - "atcoder-rs/Dockerfile"
+      - "atcoder-rs/*"
       - ".github/workflows/build-atcoder-rs.yml"
     branches: [main]
   pull_request:
     paths:
-      - "atcoder-rs/Dockerfile"
+      - "atcoder-rs/*"
       - ".github/workflows/build-atcoder-rs.yml"
     branches: [main]
   schedule:
