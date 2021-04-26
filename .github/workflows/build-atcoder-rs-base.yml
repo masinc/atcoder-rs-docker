@@ -6,11 +6,6 @@ on:
       - "atcoder-rs-base/*"
       - ".github/workflows/build-atcoder-rs-base.yml"
     branches: [main]
-  pull_request:
-    paths:
-      - "atcoder-rs-base/*"
-      - ".github/workflows/build-atcoder-rs-base.yml"
-    branches: [main]
   schedule:
     - cron: "0 1 * * *"
 jobs:

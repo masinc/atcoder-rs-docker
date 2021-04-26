@@ -6,11 +6,6 @@ on:
     paths:
       - "atcoder-rs-builder/Dockerfile"
       - ".github/workflows/build-atcoder-rs-builder.yml"
-  pull_request:
-    branches: [main]
-    paths:
-      - "atcoder-rs-builder/Dockerfile"
-      - ".github/workflows/build-atcoder-rs-builder.yml"
   schedule:
     - cron: "0 0 * * 5"
 jobs:
