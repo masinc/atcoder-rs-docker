@@ -1,6 +1,13 @@
 #!/bin/bash -eu
 
-cd atcoder-sample && \
+cd ja-all-enabled && \
 cargo check && \
-cargo check --release && \
+cargo check --release
+
+cd ..
+
+cd ja && \
+cargo check && \
+cargo check --release
+
 redis-cli -h database save

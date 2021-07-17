@@ -1,0 +1,11 @@
+version: "3"
+services:
+  redis:
+    image: masinc/atcoder-rs-redis
+  rust:
+    links:
+      - redis:database
+    depends_on:
+      - redis
+    image: masinc/atcoder-rs
+    tty: true
