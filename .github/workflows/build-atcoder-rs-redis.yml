@@ -6,6 +6,7 @@ on:
     paths:
       - "atcoder-rs/redis/**"
       - "docker-composer-builder.yml"
+      - ".github/workflows/build-atcoder-rs-redis.yml"
   schedule:
     - cron: "0 * * * *"
   workflow_dispatch:
@@ -25,9 +26,9 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       - name: PreBuild
         run: |
-          docker-compose .f ./docker-composer-builder.yml up -d
-          docker-compose .f ./docker-composer-builder.yml run cache-builder /root/start.sh
-          docker-compose .f ./docker-composer-builder.yml down
+          docker-compose -f ./docker-composer-builder.yml up -d
+          docker-compose -f ./docker-composer-builder.yml run cache-builder /root/start.sh
+          docker-compose -f ./docker-composer-builder.yml down
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
