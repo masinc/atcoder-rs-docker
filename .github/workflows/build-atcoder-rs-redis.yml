@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "atcoder-rs/redis/**"
+      - "atcoder-rs-redis/**"
+      - "atcoder-rs-cache-builder/**"
       - "docker-composer-builder.yml"
       - ".github/workflows/build-atcoder-rs-redis.yml"
   schedule:
