@@ -9,7 +9,7 @@ on:
       - "docker-composer-builder.yml"
       - ".github/workflows/build-atcoder-rs-redis.yml"
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 2 * * *"
   workflow_dispatch:
 jobs:
   build:
