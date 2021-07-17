@@ -1,0 +1,19 @@
+version: "3"
+services:
+  redis-builder:
+    build:
+      context: atcoder-rs-redis
+      dockerfile: Dockerfile-builder
+    ports:
+      - "6379:6379"
+    container_name: atcoder-redis-builder
+    volumes:
+      - "./atcoder-rs-redis/data:/data"
+  cache-builder:
+    build:
+      context: atcoder-rs-cache-builder
+    links:
+      - redis-builder:database
+    depends_on:
+      - redis-builder
+    tty: true
