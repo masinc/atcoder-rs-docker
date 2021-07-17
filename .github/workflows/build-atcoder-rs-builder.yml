@@ -8,6 +8,7 @@ on:
       - ".github/workflows/build-atcoder-rs-builder.yml"
   schedule:
     - cron: "0 0 * * 5"
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
